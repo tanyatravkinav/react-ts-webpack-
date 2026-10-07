@@ -8,7 +8,16 @@ on:
 jobs:
   Pipeline:
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: ['18.x', '20.x']
+
     steps:
+      - uses: actions/checkout@v6
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v7
+        with:
+          node-version: ${{ matrix.node-version }}
       - name: install modules
         run: npm install
       - name: build production project
