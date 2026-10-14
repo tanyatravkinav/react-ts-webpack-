@@ -4,6 +4,7 @@ import { withTranslation } from "react-i18next";
 import { componentRender } from "shared/lib/tests/componentRender";
 import { fireEvent } from "@testing-library/dom";
 
+
 describe("test Sidebar", () => {
   test("render Sidebar", () => {
     // const SideBarWithTranslation = withTranslation()(SideBar)
