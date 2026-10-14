@@ -10,7 +10,7 @@ describe("test Sidebar", () => {
     // render(<SideBarWithTranslation />);
     // expect(screen.getByText("toggle")).toBeInTheDocument();
 
-    renderWithTranslation(<SideBar />)
+    componentRender(<SideBar />)
     expect(screen.getByTestId("sidebar"))
   });
 
