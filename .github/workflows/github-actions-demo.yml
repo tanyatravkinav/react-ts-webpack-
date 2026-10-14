@@ -20,7 +20,6 @@ jobs:
           node-version: ${{ matrix.node-version }}
       - name: install modules
         run: npm install
-        if: always()
       - name: build production project
         run: npm run build:prod
         if: always()
@@ -29,3 +28,4 @@ jobs:
         if: always()
       - name: storybook build
         run: npm run build-storybook
+        if: always()
